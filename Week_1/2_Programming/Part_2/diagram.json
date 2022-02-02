@@ -1,0 +1,98 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 95.31, "left": 53.84, "attrs": {} },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": -96.76,
+        "left": 88.29,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": -96.26,
+        "left": -19.69,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": -97.42,
+        "left": 33.43,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led4",
+        "top": -89.32,
+        "left": 139.93,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led5",
+        "top": -84.79,
+        "left": 214.36,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led6",
+        "top": -78.32,
+        "left": 272.21,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led7",
+        "top": -75.72,
+        "left": 334.01,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led8",
+        "top": -72.09,
+        "left": 388.02,
+        "attrs": { "color": "red" }
+      },
+      { "type": "wokwi-resistor", "id": "r1", "top": 228.49, "left": 447.51, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r3", "top": 272.91, "left": 450.58, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r4", "top": -3.45, "left": 459.19, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r5", "top": 35.79, "left": 458.69, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r6", "top": 70.17, "left": 459.15, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r7", "top": 111.33, "left": 453.8, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r8", "top": 154.44, "left": 460.08, "attrs": {} },
+      { "type": "wokwi-resistor", "id": "r9", "top": 190.76, "left": 450.85, "attrs": {} }
+    ],
+    "connections": [
+      [ "led8:A", "r4:2", "green", [ "v6.88", "h125.72" ] ],
+      [ "led7:A", "r5:2", "green", [ "v14.39", "h177.79", "v61.06" ] ],
+      [ "led6:A", "r6:2", "green", [ "v23.77", "h249.28", "v88.19", "h-34.89" ] ],
+      [ "led5:A", "r7:2", "green", [ "v38.96", "h323.61", "v122.12" ] ],
+      [ "led4:A", "r8:2", "green", [ "v39.62", "h405.79", "v170.57", "h0.97" ] ],
+      [ "led1:A", "r9:2", "green", [ "v50.93", "h472.94", "v8.72" ] ],
+      [ "led3:A", "r1:2", "green", [ "v50.62", "h537.49", "v230.66" ] ],
+      [ "led2:A", "r3:2", "green", [ "v48.49", "h601.27", "v288.81" ] ],
+      [ "r4:1", "uno:4", "green", [ "v1.28", "h-131.76" ] ],
+      [ "r5:1", "uno:5", "green", [ "v-22.45", "h-201.04" ] ],
+      [ "r6:1", "uno:6", "green", [ "v-24.85", "h-209.25" ] ],
+      [ "r7:1", "uno:7", "green", [ "v-47.59", "h-105.05" ] ],
+      [ "r8:1", "uno:8", "green", [ "v-2.51", "h-49.3", "v-82.38", "h-180.27" ] ],
+      [ "r9:1", "uno:9", "green", [ "v0.91", "h-69.15", "v-116.3", "h-167.67" ] ],
+      [ "r1:1", "uno:10", "green", [ "v-1.93", "h-91.97", "v-153.13" ] ],
+      [ "r3:1", "uno:11", "green", [ "v-6.62", "h-101.83", "v-196.74", "h-148.28" ] ],
+      [ "led2:C", "uno:GND.2", "green", [ "v25.82", "h-38.22", "v332.44", "h271.03" ] ],
+      [ "led3:C", "uno:GND.3", "green", [ "v21.69", "h-105.11", "v349.38", "h284.8" ] ],
+      [ "led1:C", "uno:GND.3", "green", [ "v21.03", "h-171.61", "v357.85", "h299.62" ] ],
+      [ "led4:C", "uno:GND.2", "green", [ "v6.18", "h-229.61", "v373.73", "h293.27" ] ],
+      [ "led5:C", "uno:GND.2", "green", [ "v-0.47", "h-312.51", "v382.2", "h307.03" ] ],
+      [ "led6:C", "uno:GND.3", "green", [ "v4.7", "h-380.94", "v370.55", "h326.09" ] ],
+      [ "led7:C", "uno:GND.3", "green", [ "v9.51", "h-454.39", "v373.73", "h334.56" ] ],
+      [ "led8:C", "uno:GND.2", "green", [ "v8", "h-520.04", "v383.26", "h341.97" ] ]
+    ]
+  }
