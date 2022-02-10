@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "author": "Zul Vadet",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 94.79, "left": -12.97, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -46.08,
+      "left": -46.06,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -61.44,
+      "left": 216.56,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": 178.27,
+      "left": 321.2,
+      "attrs": { "horn": "cross" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 117.48,
+      "left": 340.29,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 147.99,
+      "left": 280.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "ntc1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "ntc1:OUT", "uno:A0", "green", [ "h0" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h0" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h21.53", "v282.09" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "lcd1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo2:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "servo2:V+", "uno:VIN", "green", [ "h0" ] ],
+    [ "ntc1:VCC", "uno:VIN", "red", [ "h0" ] ],
+    [ "servo2:PWM", "uno:10", "green", [ "h0" ] ],
+    [ "led1:C", "uno:GND.3", "green", [ "v0" ] ],
+    [ "led1:A", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "uno:12", "green", [ "v0" ] ]
+  ]
+}

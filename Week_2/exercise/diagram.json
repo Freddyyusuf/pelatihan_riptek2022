@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Freddy Millenia",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 27.33, "left": -16, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 252.04,
+      "left": -31.37,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 106.13,
+      "left": 329.01,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "ldr1:VCC", "uno:5V", "red", [ "h-4.64", "v-47.39" ] ],
+    [ "ldr1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "ldr1:AO", "uno:A1", "green", [ "h0" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-35.66", "v42.63" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-49.69", "v72.3", "h-53.49" ] ],
+    [ "lcd1:GND", "uno:GND.3", "black", [ "h-54.95", "v98.32", "h-110.49" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-71.61", "v103.72", "h-115.75", "v-20.17" ] ]
+  ]
+}

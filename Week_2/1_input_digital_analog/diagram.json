@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Freddy Millenia",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -123.6, "left": 39.17, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -15.47, "left": 339.09, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -215.56,
+      "left": 155,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "pot1:GND", "uno:GND.3", "black", [ "v35.92", "h-152.47" ] ],
+    [ "btn1:2.l", "uno:GND.1", "green", [ "h0" ] ],
+    [ "btn1:1.r", "uno:5", "green", [ "v1.1", "h24.28" ] ],
+    [ "pot1:SIG", "uno:A1", "green", [ "v44.48", "h-127.03" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v50.75", "h-183.06", "v-0.63" ] ]
+  ]
+}
