@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Judul Web</title>
+</head>
+
+<body>
+  <p id="display">0</p>
+  <button onclick="doIncrement()">Click Me!</button>
+
+  <br><br><br>
+
+  <input type="text" id="input">
+  <button onclick="printInput()">print to console</button>
+
+  <script>
+    const display = document.getElementById("display")
+    const input = document.getElementById("input")
+
+    function doIncrement() {
+      display.innerHTML++
+    }
+
+    function printInput(params) {
+      console.log(input.value);
+      input.value = ""
+    }
+
+  </script>
+</body>
+
+</html>
